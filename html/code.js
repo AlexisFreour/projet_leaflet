@@ -27,7 +27,7 @@ function enregistrerVueFavorite() {
     var latLng = map.getCenter();
     var zoom = map.getZoom();
     // Enregistrer les informations dans le localstorage avec un nom unique, par exemple :
-    localStorage.setItem(texteSaisi, JSON.stringify({latLng: latLng, zoom: zoom}));
+    localStorage.setItem(texteSaisi, JSON.stringify({lat: lat, lng: lng, zoom: zoom}),);
     // Mettre à jour le tableau affiché dans la page
     afficherVuesFavorites();
   }
