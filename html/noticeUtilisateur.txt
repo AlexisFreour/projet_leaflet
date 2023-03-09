@@ -1,0 +1,37 @@
+Notice Utilisateur
+
+Après avoir lancer la page html vous pouvez profitez des différentes fonctions proposées.
+
+Enregistrer une vue favorite :
+     
+     Pour enregistrer une vue favorite cliquez sur la carte à l'endroit que vous voulez enregistrer et réglez le zoom comme vous le désirez. 
+     Vous apercevrez que les cases latitude et longitude se sont rempli automatiquement.
+     A vous d'ajouter (si vous désirez): - le nom de cette position
+                                         - les commentaires/notes que vous voulez faire apparaitre à cet endroit
+                                         - le nom de la photo que vous voulez (afin d'ajouter une photo veuillez d'abord l'ajouter dans le dossier du projet au même niveau que la page html)
+    Vous pouvez ensuite validez l'enregistrement avec le bouton "Enregistrer"
+    La tableau va alors se mettre à jour avec une nouvelle ligne résumant les informations données.
+    Un marqueur va aussi apparaitre sur la carte et en cliquant dessus vous apercevrez la note et la photo si jamais vous en avez ajouter
+
+Retourner sur un position enregistrée :
+
+    Lors de la création d'une position favorite un bouton "Aller" est aussi apparu, cliquez simplement sur celui-ci afin de retourner à la position enregistrée.
+
+Supprimer une vue favorite :
+
+    Lors de la création d'une position favorite un bouton "Supprimer" est aussi apparu, cliquez simplement sur celui-ci afin de supprimer la ligne du tableau et le marqueur correspondant.
+
+Mettre à jour une position :
+
+    Pour mettre à jour une position vous avez simplement à enregistrer une position avec le nom de la position à modifier en réécrivant ce qui est inchangé et en modifiant ce qui doit être modifié.
+
+Définir un trajet :
+
+    Afin de définir un trajet entre 2 positions enregistrées il faut cocher les cases coresspondante (selon si c'est le départ ou l'arrivée) situées dans la ligne de la position voulue.
+    Une fois un départ et une arrivée choisis vous pouvez cliquer sur le bouton "Définir le trajet" afin de tracer le trajet sur la carte.
+    !! Si vous rencontrez un problème lors de la génération d'un trajet merci de bien vouloir créer un compte MapBox et de générer une clé de licence (gratuite) afin de remplacer celle utilisée dans la fonction 
+    trajet() du fichier app.js à l'endroit indiquée (ligne 173).
+
+Supprimer tous les trajets :
+
+    Afin de supprimer tous les trajets vous pouvez cliquer sur le bouton "Effacer tous les trajets".

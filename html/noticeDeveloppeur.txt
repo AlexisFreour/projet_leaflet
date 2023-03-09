@@ -1,0 +1,22 @@
+Notice Développeur
+
+Fichiers :
+
+Les fichiers app.html, app.js et app.css sont les codes crées par YU Xi et Freour Alexis.
+Tous les autres sont ceux ajouter au projet afin de faire fonctionner leaflet et le plugin routing-machine.
+
+Contenu : 
+
+app.html :
+
+    Contient le code HTML permettant de structurer l'application. Les éléments notables sont la carte, le tableau formulaire et le tableau des positions favorites.
+
+app.js : 
+
+    Contient le script JavaScript appelé dans la page HTML afin de faire fonctionner l'application.
+    Le script va tout d'abord générer la carte et lui ajouter les tuiles de cartes Openstreetmap afin d'avoir une carte fonctionnelle.
+    Toutes les fonctions nécessaires au bon fonctionnement sont ensuite implémenter et les commentaires fournis sont la pour les expliquées
+
+app.css : 
+
+    Contient le code css permettant de définir l'apparence de l'application.

@@ -1,0 +1,64 @@
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #eaf7ea;
+  opacity: 0.9;
+  z-index: -1;
+}
+
+button {
+  background-color: #8eb68f;
+  border: none;
+  border-radius: 5px;
+  color: black;
+  font-size: 18px;
+  padding: 10px 20px;
+}
+input[type="radio"] {
+  appearance: none;
+  border-radius: 50%;
+  border: 2px solid black;
+  width: 20px;
+  height: 20px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+
+input[type="radio"]:checked {
+  background-color: #8eb68f;
+  border-color: black;
+  transition: all 0.3s ease;
+}
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+  
+  th {
+    background-color: #def4df;
+    color: black;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  .tableaux-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .tableau {
+    width: 45%;
+  }
