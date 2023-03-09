@@ -1,0 +1,26 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+  
+  th {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  .tableaux-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .tableau {
+    width: 45%;
+  }

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="leaflet-routing-machine.css" />
+  <link rel="stylesheet" href="leaflet.css">
+  <link rel="stylesheet" href="tab.css">
+
+  <script src="leaflet.js"></script>
+  <script src="leaflet-routing-machine.js"></script>
+
+     
+  <title>Leaflet.js</title>
+
+</head>
+<body>
+  <h1>Test de leaflet.js</h1>
+  
+  <div id="map"></div>
+  <script src="code.js"></script>
+  <script src="table.js"></script>
+  <label for="nom-vue">Entrez le nom de la vue :</label>
+  <textarea id="nom-vue"></textarea>     <button onclick="enregistrerVueFavorite()">Enregistrer la vue</button>
+  
+  
+ 
+  
+
+
+  <div class="tableaux-container">
+    <div class="tableau">
+      <table>
+        <thead>
+          <tr>
+            <th>Nom</th>
+            <th>Valeur</th>
+            <th>Y Aller</th>
+            <th>Supprimer</th>
+          </tr>
+        </thead>
+        <tbody id="tableau-donnees-corps">
+        </tbody>
+      </table>
+    </div>
+    <div class="tableau">
+      <table>
+        <thead>
+          <tr>
+            <th>Latitude</th>
+            <th>Longitude</th>
+            <th>Commentaire</th>
+            <th></th>
+            <th></th>
+            <th>URL Image</th>
+          </tr>
+          <tr>
+            <th><input type="text" placeholder="Latitude" id="laititude"></th>
+            <th><input type="text" placeholder="Longitude" id="longtitude"></th>
+            <th><input type="text" placeholder="Commentaire" style="width:300px;" id="commentaire"></th>
+            <th><button onclick="fct_sauvegarder()">Sauvegarder</button></th>
+            <th><button onclick="fct_abandonner()">Abandonner</button></th>
+            <th><input type="text" placeholder="URL image" style="width:300px;" id="url"></th>
+          </tr>
+        </thead>
+        <tbody id="table">
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+  
+</body>
+</html>
