@@ -7,7 +7,7 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
-
+var markers = L.layerGroup().addTo(map);
 function onMapClick(e) {
     popup
         .setLatLng(e.latlng)
@@ -50,9 +50,9 @@ function enregistrerVueFavorite() {
     // Mettre à jour le tableau affiché dans la page
     
 
-    var marker = L.marker([lat, lng]).addTo(map);
     
-    marker.bindPopup(com);
+    
+    
         afficherFavoris();
 }
 
@@ -65,7 +65,7 @@ function afficherFavoris() {
     }
     var corpsTableau = document.getElementById('tableau-donnees-corps');
     corpsTableau.innerHTML = ''; // Réinitialisation du corps du tableau
-    
+   
     for (var i = 0; i < toutesLesDonnees.length; i++) {
       var ligne = corpsTableau.insertRow(-1); // Ajout d'une nouvelle ligne au tableau
       var celluleCle = ligne.insertCell(0); // Ajout d'une cellule pour la clé (nom)
@@ -84,6 +84,9 @@ function afficherFavoris() {
       celluleImage.innerHTML = valJson.img;
       celluleAller.innerHTML = '<button onclick="allerVersPosition(\'' + toutesLesDonnees[i].cle + '\')">Aller</button>';// Ajout du bouton Aller dans la cellule correspondante
       celluleSupprimer.innerHTML = '<button onclick="supprimerDonnee(\'' + toutesLesDonnees[i].cle + '\')">Supprimer</button>'; // Ajout du bouton Supprimer dans la cellule correspondante
+      var marker = L.marker([valJson.lat, valJson.lng]).addTo(markers);
+      marker.bindPopup(valJson.com);
+    
     }   
 }
 
@@ -102,12 +105,10 @@ function allerVersPosition(cle) {
 }
 
 function supprimerDonnee(clé) {
-    //Supprimer la ligne voulue
-    
-
+    markers.clearLayers(); //supprimer tous les marqueurs 
     localStorage.removeItem(clé);
 
-        // Mettre à jour le tableau affiché dans la page
+        // Mettre à jour le tableau affiché dans la page et les marqueurs de la carte (recreer les marqueurs non supprimés)
     afficherFavoris();
     
 }
